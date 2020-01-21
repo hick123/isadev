@@ -1,0 +1,131 @@
+@import "./aboutme.scss";
+$color-primary: #032030;
+$color-secondary: #b61924;
+$color-particles-bg :#b61924;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: o;
+}
+
+html {
+    font-family: 'Open Sans', serif;
+    font-size: 80%;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color:#032030;
+    display: flex;
+    width: 18%;
+    // flex: 0 0 18%;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    justify-content: space-between;
+
+    &__nav-items {
+        color: white;
+        // padding: 2rem;
+        list-style: none;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 1.5rem 4rem;
+        text-transform: uppercase;
+
+        position: relative;
+        z-index: 10;
+    }
+
+    &__item {
+        position: relative;
+        &:not(:last-child){
+            margin-bottom: 0.5px;
+        }
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100;
+        width: 5px;
+        transform: scale(0);
+        background-color: #dd0a35;
+        transition: transform 0.2s,
+                    width .4s cubic-bezier(1,0,0,1) .2s;
+
+    }
+    &__item:hover::before{
+        transform: scale(1);
+        width: 100%;
+    }
+
+    &__socials {
+        color: white;
+    }
+
+    &__logo {
+        img {
+            margin: 0;
+            // padding: 1rem 2.5rem;
+            height: 20rem;
+            width: 20rem;
+        }
+    }
+}
+
+.content {
+    margin-left: 18%;
+    // background-color: $color-secondary;
+    flex: 1;
+    // height: 100vh;
+}
+.resume{
+padding-left: 100px;
+    background-color: #ffffff;
+    height: 100vh;
+    &__skills{
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+    padding-left: 25px;
+    }
+}
+
+// about me
+
+
+.aboutme{
+    background-color: $color-secondary;
+    height: 100vh;
+
+    h5{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: center;
+
+    }
+ 
+    p{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: center;
+    }
+}

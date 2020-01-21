@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.aboutme {
+  background-color: #b61924;
+  height: 100vh; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: o; }
+
+html {
+  font-family: 'Open Sans', serif;
+  font-size: 80%; }
+
+.container {
+  display: flex; }
+
+.sidebar {
+  background-color: #032030;
+  display: flex;
+  width: 18%;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  justify-content: space-between; }
+  .sidebar__nav-items {
+    color: white;
+    list-style: none; }
+  .sidebar__link:link, .sidebar__link:visited {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1.5rem 4rem;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10; }
+  .sidebar__item {
+    position: relative; }
+    .sidebar__item:not(:last-child) {
+      margin-bottom: 0.5px; }
+  .sidebar__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100;
+    width: 5px;
+    transform: scale(0);
+    background-color: #dd0a35;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
+  .sidebar__item:hover::before {
+    transform: scale(1);
+    width: 100%; }
+  .sidebar__socials {
+    color: white; }
+  .sidebar__logo img {
+    margin: 0;
+    height: 20rem;
+    width: 20rem; }
+
+.content {
+  margin-left: 18%;
+  flex: 1; }
+
+.resume {
+  padding-left: 100px;
+  background-color: #ffffff;
+  height: 100vh; }
+  .resume__skills {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    padding-left: 25px; }
+
+.aboutme {
+  background-color: #b61924;
+  height: 100vh; }
+  .aboutme h5 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center; }
+  .aboutme p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center; }
