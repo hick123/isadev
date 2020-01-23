@@ -80,10 +80,32 @@ html {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    color: white;
+    font-size: 2.5vw;
+    text-align: center;
+    border-bottom: solid 7px #032030;
+    width: 15%; }
+  .aboutme__intro {
+    font-size: 4vw;
+    color: white;
     text-align: center; }
+  .aboutme__leftbracket {
+    font-size: 150px; }
   .aboutme p {
+    padding-top: 10vw;
     display: block;
+    font-size: 1.5vmax;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    text-align: center; }
+    color: white;
+    text-align: center;
+    z-index: 10; }
+  .aboutme__content {
+    position: absolute;
+    margin-top: 20px; }
+
+#particles {
+  width: 100%;
+  height: 100%;
+  position: relative; }
